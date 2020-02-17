@@ -5,7 +5,12 @@ export class WebMapView extends React.Component {
   constructor(props) {
     super(props);
     this.mapRef = React.createRef();
-    // this.state =  this.mapImageLayer;
+    this.state = {
+      homelink: this.mapRef
+    }
+    // this.state = {
+    //   data: false
+    // }
     
   }
   // async componentDidMount() {
@@ -16,7 +21,19 @@ export class WebMapView extends React.Component {
   // }
   // componentDidMount() {
 
-  //   this.getData();
+  //   let url = "http://103.58.93.172/tillerwebadaptor/rest/services/Test/BD_Boundary/MapServer/0?f=pjson"
+  //   fetch(url,{
+  //     method: 'GET',
+  //     headers: {
+  //       'Accept' : 'application/json',
+  //       'Content-Type' : 'application/json',
+  //     }
+  //   }).then((result) => {
+  //     result.json().then((resp) =>{
+  //       this.setState({data:resp})
+  //     })
+
+  //   })
   // }
 
   // getData() {
@@ -41,6 +58,12 @@ export class WebMapView extends React.Component {
   //     });
 
   //   });
+  // }
+  // componentDidUpdate(){
+  //   this.setState(prevState =>{
+  //     return {llayer: prevState} 
+
+  //   })
   // }
   
  
@@ -118,8 +141,11 @@ export class WebMapView extends React.Component {
 
           });
         })
+        
     return (
-      <div className="webmap" ref={this.mapRef}>
+      
+      <div className="webmap" ref={this.state.homelink}>
+        
         </div>
       
     );

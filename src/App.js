@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar'
+import './map.css'
+import CheckBox from './Components/CheckBox'
+import WebMapView from './Components/WebMapView';
+
+
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="topview">
+        <h1>Hello</h1>
+        <h1>BD Map</h1>
+      </div>
+
+      <Navbar />
+      <WebMapView />
+      <CheckBox />
+
     </div>
   );
 }

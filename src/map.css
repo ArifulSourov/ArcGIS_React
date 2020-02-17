@@ -1,0 +1,13 @@
+
+.filter{
+    text-align: left;
+    margin-top: 200px;
+}
+.topview{
+    background-color: lavender;
+}
+.webmap {
+    height: 800px;
+    width: 60%;
+    float: right;
+}
